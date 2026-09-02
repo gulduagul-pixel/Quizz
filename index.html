@@ -3,32 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BrainBolt Quiz</title>
+  <title>BrainBolt - Ultimate Quiz</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="quiz-container">
-    <div class="header">
+
+  <div class="app-container">
+    
+    <!-- 1. USER NAME INPUT SCREEN -->
+    <div id="start-screen" class="card active">
       <div class="brand">🕹️ BrainBolt</div>
-      <div class="stats">
-        <span class="streak">🔥 <span id="streak-count">0</span></span>
-        <span class="score">Score: <span id="score-count">0</span></span>
+      <h2>Welcome to the Ultimate Quiz</h2>
+      <p>Enter your name to start the challenge and claim your place on the leaderboard!</p>
+      
+      <div class="input-group">
+        <input type="text" id="username-input" placeholder="Enter your full name..." autocomplete="off">
       </div>
+      
+      <button id="start-btn" class="btn primary-btn">Start Quiz 🚀</button>
     </div>
 
-    <div class="quiz-card">
-      <div class="card-header">
-        <span class="question-tracker">Question <span id="current-question">1</span> / <span id="total-questions">5</span></span>
+    <!-- 2. QUIZ PLAY SCREEN -->
+    <div id="quiz-screen" class="card hidden">
+      <div class="header">
+        <div class="player-info">Player: <span id="player-display">User</span></div>
+        <div class="stats">
+          <span class="badge streak">🔥 <span id="streak-count">0</span></span>
+          <span class="badge score">Score: <span id="score-count">0</span></span>
+        </div>
+      </div>
+
+      <div class="quiz-progress">
+        <span class="question-tracker">Question <span id="current-question">1</span> / <span id="total-questions">10</span></span>
         <div class="timer-circle" id="timer">15</div>
       </div>
 
-      <h2 id="question-text">Loading question...</h2>
+      <h3 id="question-text">Loading question...</h3>
 
-      <div class="options-grid" id="options-container">
-        </div>
+      <div class="options-grid" id="options-container"></div>
 
-      <button id="next-btn" class="next-btn" style="display: none;">Next Question →</button>
+      <button id="next-btn" class="btn primary-btn hidden">Next Question →</button>
     </div>
+
+    <!-- 3. SCORE & LEADERBOARD SCREEN -->
+    <div id="result-screen" class="card hidden">
+      <div class="result-header">
+        <h2>🎉 Quiz Completed!</h2>
+        <p>Great job, <span id="final-player-name">Player</span>!</p>
+        <div class="final-score-box">
+          <span>Your Final Score</span>
+          <h1 id="final-score">0</h1>
+        </div>
+      </div>
+
+      <div class="leaderboard-section">
+        <h3>🏆 Top Leaderboard</h3>
+        <ul id="leaderboard-list"></ul>
+      </div>
+
+      <button id="restart-btn" class="btn secondary-btn">Play Again 🔄</button>
+    </div>
+
   </div>
 
   <script src="script.js"></script>
