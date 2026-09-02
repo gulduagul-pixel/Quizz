@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c20, #1b1638);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  width: 90%;
+  max-width: 500px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.stats span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+.quiz-card {
+  background: #181433;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.question-tracker {
+  color: #8f8ba8;
+  font-size: 0.95rem;
+}
+
+.timer-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid #00f2fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #00f2fe;
+}
+
+#question-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  background: #231d47;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+  background: #2f275e;
+  border-color: #00f2fe;
+}
+
+.option-btn.correct {
+  background: #10b981 !important;
+  border-color: #10b981 !important;
+}
+
+.option-btn.wrong {
+  background: #ef4444 !important;
+  border-color: #ef4444 !important;
+}
+
+.next-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #6366f1;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.next-btn:hover {
+  background: #4f46e5;
+}

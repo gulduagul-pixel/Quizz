@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainBolt Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="header">
+      <div class="brand">🕹️ BrainBolt</div>
+      <div class="stats">
+        <span class="streak">🔥 <span id="streak-count">0</span></span>
+        <span class="score">Score: <span id="score-count">0</span></span>
+      </div>
+    </div>
+
+    <div class="quiz-card">
+      <div class="card-header">
+        <span class="question-tracker">Question <span id="current-question">1</span> / <span id="total-questions">5</span></span>
+        <div class="timer-circle" id="timer">15</div>
+      </div>
+
+      <h2 id="question-text">Loading question...</h2>
+
+      <div class="options-grid" id="options-container">
+        </div>
+
+      <button id="next-btn" class="next-btn" style="display: none;">Next Question →</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
