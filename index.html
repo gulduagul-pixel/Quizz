@@ -11,11 +11,10 @@
 
   <div class="app-container">
     
-    <!-- 1. USER NAME INPUT SCREEN -->
     <div id="start-screen" class="card active">
       <div class="brand">🕹️ BrainBolt</div>
       <h2>Welcome to the Ultimate Quiz</h2>
-      <p>Enter your name to start the challenge and claim your place on the leaderboard!</p>
+      <p>Enter your name to start the 10-question challenge!</p>
       
       <div class="input-group">
         <input type="text" id="username-input" placeholder="Enter your full name..." autocomplete="off">
@@ -24,12 +23,12 @@
       <button id="start-btn" class="btn primary-btn">Start Quiz 🚀</button>
     </div>
 
-    <!-- 2. QUIZ PLAY SCREEN -->
     <div id="quiz-screen" class="card hidden">
       <div class="header">
         <div class="player-info">Player: <span id="player-display">User</span></div>
         <div class="stats">
-          <span class="badge streak">🔥 <span id="streak-count">0</span></span>
+          <span class="badge correct-badge">✅ <span id="correct-count">0</span></span>
+          <span class="badge wrong-badge">❌ <span id="wrong-count">0</span></span>
           <span class="badge score">Score: <span id="score-count">0</span></span>
         </div>
       </div>
@@ -46,14 +45,24 @@
       <button id="next-btn" class="btn primary-btn hidden">Next Question →</button>
     </div>
 
-    <!-- 3. SCORE & LEADERBOARD SCREEN -->
     <div id="result-screen" class="card hidden">
       <div class="result-header">
         <h2>🎉 Quiz Completed!</h2>
         <p>Great job, <span id="final-player-name">Player</span>!</p>
-        <div class="final-score-box">
-          <span>Your Final Score</span>
-          <h1 id="final-score">0</h1>
+        
+        <div class="summary-box">
+          <div class="summary-item">
+            <span class="sum-label">Correct</span>
+            <span class="sum-val green" id="final-correct">0</span>
+          </div>
+          <div class="summary-item">
+            <span class="sum-label">Wrong</span>
+            <span class="sum-val red" id="final-wrong">0</span>
+          </div>
+          <div class="summary-item">
+            <span class="sum-label">Score</span>
+            <span class="sum-val gold" id="final-score">0</span>
+          </div>
         </div>
       </div>
 

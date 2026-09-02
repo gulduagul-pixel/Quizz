@@ -21,7 +21,7 @@ body {
 }
 
 .card {
-  background: rgba(25. 20, 50, 0.7);
+  background: rgba(25, 20, 50, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -108,13 +108,13 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Quiz Screen Styles */
+/* Header & Badges */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .player-info {
@@ -122,12 +122,20 @@ body {
   font-weight: 600;
 }
 
+.stats {
+  display: flex;
+  gap: 6px;
+}
+
 .badge {
   background: rgba(255, 255, 255, 0.08);
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: 20px;
-  margin-left: 5px;
+  font-size: 0.85rem;
 }
+
+.correct-badge { color: #10b981; }
+.wrong-badge { color: #ef4444; }
 
 .quiz-progress {
   display: flex;
@@ -194,18 +202,35 @@ body {
   border-color: #ef4444 !important;
 }
 
-/* Leaderboard Styles */
-.final-score-box {
+/* Result Summary Styles */
+.summary-box {
+  display: flex;
+  justify-content: space-around;
   background: rgba(255, 255, 255, 0.05);
   padding: 15px;
   border-radius: 16px;
-  margin: 15px 0;
+  margin: 20px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.final-score-box h1 {
-  font-size: 2.5rem;
-  color: #ffcc00;
+.summary-item {
+  display: flex;
+  flex-direction: column;
 }
+
+.sum-label {
+  font-size: 0.8rem;
+  color: #a09cb0;
+}
+
+.sum-val {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.sum-val.green { color: #10b981; }
+.sum-val.red { color: #ef4444; }
+.sum-val.gold { color: #ffcc00; }
 
 .leaderboard-section {
   text-align: left;
@@ -219,7 +244,7 @@ body {
 
 #leaderboard-list {
   list-style: none;
-  max-height: 200px;
+  max-height: 180px;
   overflow-y: auto;
 }
 
