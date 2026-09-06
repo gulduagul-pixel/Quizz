@@ -10,16 +10,27 @@
 <body>
 
   <div class="app-container">
-    
-    <div id="start-screen" class="card active">
+
+    <!-- CATEGORY SELECTION (HOME) SCREEN -->
+    <div id="category-screen" class="card active">
       <div class="brand">🕹️ BrainBolt</div>
-      <h2>Welcome to the Ultimate Quiz</h2>
-      <p>Enter your name to start the 10-question challenge!</p>
-      
+      <h2>Choose a Category</h2>
+      <p>Pick a topic to start your 10-question challenge!</p>
+
+      <div class="category-grid" id="category-grid"></div>
+    </div>
+
+    <!-- NAME ENTRY SCREEN -->
+    <div id="start-screen" class="card hidden">
+      <button class="back-link" id="back-to-categories">← Back to Categories</button>
+      <div class="category-chip" id="selected-category-chip">Category</div>
+      <h2>Enter Your Name</h2>
+      <p>Get ready for the 10-question challenge!</p>
+
       <div class="input-group">
         <input type="text" id="username-input" placeholder="Enter your full name..." autocomplete="off">
       </div>
-      
+
       <button id="start-btn" class="btn primary-btn">Start Quiz 🚀</button>
     </div>
 
@@ -34,7 +45,10 @@
       </div>
 
       <div class="quiz-progress">
-        <span class="question-tracker">Question <span id="current-question">1</span> / <span id="total-questions">10</span></span>
+        <span class="question-tracker">
+          <span class="category-chip inline" id="quiz-category-chip">Category</span>
+          Question <span id="current-question">1</span> / <span id="total-questions">10</span>
+        </span>
         <div class="timer-circle" id="timer">15</div>
       </div>
 
@@ -49,7 +63,7 @@
       <div class="result-header">
         <h2>🎉 Quiz Completed!</h2>
         <p>Great job, <span id="final-player-name">Player</span>!</p>
-        
+
         <div class="summary-box">
           <div class="summary-item">
             <span class="sum-label">Correct</span>
@@ -67,11 +81,14 @@
       </div>
 
       <div class="leaderboard-section">
-        <h3>🏆 Top Leaderboard</h3>
+        <h3>🏆 <span id="leaderboard-category-name">Top</span> Leaderboard</h3>
         <ul id="leaderboard-list"></ul>
       </div>
 
-      <button id="restart-btn" class="btn secondary-btn">Play Again 🔄</button>
+      <div class="result-actions">
+        <button id="restart-btn" class="btn secondary-btn">Play Again 🔄</button>
+        <button id="home-btn" class="btn primary-btn">All Categories 🏠</button>
+      </div>
     </div>
 
   </div>
